@@ -105,7 +105,7 @@ function captureImageLoop(lastRetrieval, captureFrequency, blobService) {
 
 // setup, if necessary, the Azure Storage account, creating the container.
 var blobService = storageApi.createBlobService(storageAccount, storageAccountKey);
-blobService.createContainerIfNotExists(storageAccountContainer, function(error, result, response) {
+blobService.createContainerIfNotExists(storageAccountContainer, {publicAccessLevel : 'blob'}, function(error, result, response) {
     if (error) {
         console.log("Unable to create storage account container: " + storageAccountContainer + ", error: " + error);
         process.exit(1);

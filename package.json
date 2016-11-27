@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "azure-storage": "*",
-    "request": "*",
+    "request": "*"
   },
   "repository": {
     "type": "git",
